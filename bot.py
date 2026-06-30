@@ -6,7 +6,7 @@ from aiogram.filters import CommandStart
 
 TOKEN = "8810629058:AAE4THdq4wX6-7P7vxDszBpJHipMKelG2MY"
 # Посилання на вашу завантажену HTML-сторінку (обов'язково HTTPS)
-WEB_APP_URL = "http://127.0.0.1:5500/index.html" 
+WEB_APP_URL = "https://pikitosdoritos.github.io/booking-bot-server/form" 
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
