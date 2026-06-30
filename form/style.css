@@ -1,3 +1,25 @@
 div {
     width: 100%;
+    display: grid;
+    justify-content: center;
+
+}
+
+input {
+    width: 250px;
+}
+
+h1 {
+    text-align: center;
+    color: #16202E;
+    font-family: "Golos Text", sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    color: #8A94A3;
+    font-size: 15px;
+    font-weight: medium;
 }
