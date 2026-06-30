@@ -1,14 +1,43 @@
-div {
-    width: 100%;
-    margin: auto;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
     font-family: "Golos Text", sans-serif;
+    background-color: #ffffff;
+    color: #16202E;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 80px 16px 24px;
+}
+
+.booking-card {
+    width: 100%;
+    max-width: 346px;
+}
+
+.field {
+    margin-top: 16px;
 }
 
 input {
-    width: 250px;
+    width: 100%;
+    height: 48px;
+
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 22px;
+
+    background-color: #F2F4F7;
+
+    font-family: inherit;
+    font-size: 15px;
 }
 
 h1 {
@@ -27,7 +56,11 @@ h2 {
 }
 
 label {
+    display: block;
+    margin-bottom: 6px;
+
     font-size: 13px;
+    font-weight: 600;
     color: #7A8595;
 }
 
@@ -66,4 +99,71 @@ button:active {
 button:focus {
     outline: none;
     box-shadow: 0 0 0 4px rgba(47, 107, 216, 0.2);
+}
+
+.field {
+    margin-top: 20px;
+}
+
+.field-label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #69737F;
+}
+
+.place-switch {
+    display: flex;
+    width: 100%;
+    height: 48px;
+
+    padding: 4px;
+    background-color: #F2F4F7;
+    border-radius: 24px;
+}
+
+.place-switch input {
+    display: none;
+}
+
+.place-switch label {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #69737F;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.place-switch input:checked+label {
+    background-color: #FFFFFF;
+    color: #2F6BD8;
+    box-shadow: 0 1px 3px rgba(20, 29, 43, 0.16);
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+
+    padding: 14px 16px;
+
+    border: none;
+    border-radius: 22px;
+
+    background-color: #F2F4F7;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    resize: none;
 }

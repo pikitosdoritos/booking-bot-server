@@ -13,24 +13,46 @@
 </head>
 
 <body>
-    <h1>Запись на индивидуальную тренировку</h1>
-    <h2>Заполните форму для отправки заявки</h2>
+    <main class="page">
+        <div class="booking-card">
+            <h1>Запись на индивидуальную тренировку</h1>
+            <h2>Заполните форму для отправки заявки</h2>
 
-    <div>
-        <label for="fullname">ФИО</label>
-        <input type="text" name="fullname" id="fullname">
+            <div class="field">
+                <label for="fullname">ФИО</label>
+                <input type="text" name="fullname" id="fullname" placeholder="Иванов Иван Иванович">
+            </div>
 
-        <label for="phone-number">Номер телефона</label>
-        <input type="text" name="phone-number" id="phone-number">
+            <div class="field">
+                <label for="phone-number">Номер телефона</label>
+                <input type="text" name="phone-number" id="phone-number" placeholder="+380 (__) ___-__-__">
+            </div>
 
-        <label for="comments">Коментарии</label>
-        <input type="text" name="comments" id="comments">
+            <div class="field">
+                <label for="datetime">Дата и время</label>
+                <input type="datetime-local" name="datetime" id="datetime">
+            </div>
 
-        <label for="datetime">Дата и время</label>
-        <input type="datetime" name="datetime" id="datetime">
+            <div class="field">
+                <label class="field-label">Место тренировки</label>
 
-        <button class="check">Отправить на подтверждение</button>
-    </div>
+                <div class="place-switch">
+                    <input type="radio" name="place" id="gym" value="В зале" checked>
+                    <label for="gym">В зале</label>
+
+                    <input type="radio" name="place" id="outside" value="На улице">
+                    <label for="outside">На улице</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="comments">Комментарии</label>
+                <textarea name="comments" id="comments" placeholder="Пожелания к тренировке, цель, опыт…"></textarea>
+            </div>
+
+            <button class="check">Отправить на подтверждение</button>
+        </div>
+    </main>
 </body>
 
 </html>
