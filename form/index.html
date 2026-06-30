@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація</title>
+    <!-- Підключаємо офіційний скрипт Telegram Mini Apps -->
+    <script src="https://telegram.org"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f9; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { background: #0088cc; color: white; border: none; padding: 10px 15px; width: 100%; cursor: pointer; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+    <h2>Заповніть анкету</h2>
+    <div class="form-group">
+        <label for="name">Ваше ім'я:</label>
+        <input type="text" id="name" placeholder="Введіть ім'я">
+    </div>
+    <div class="form-group">
+        <label for="city">Місто:</label>
+        <select id="city">
+            <option value="Київ">Київ</option>
+            <option value="Львів">Львів</option>
+            <option value="Одеса">Одеса</option>
+        </select>
+    </div>
+    <button id="send">Надіслати дані</button>
+
+    <script>
+        // Ініціалізація Telegram WebApp API
+        const tg = window.Telegram.WebApp;
+        tg.expand(); // Розгортаємо вікно на максимум
+
+        document.getElementById('send').addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const city = document.getElementById('city').value;
+
+            if (!name) {
+                alert("Будь ласка, введіть ім'я");
+                return;
+            }
+
+            // Збираємо дані в об'єкт
+            const data = { name: name, city: city };
+
+            // Відправляємо дані назад у бот та закриваємо Mini App
+            tg.sendData(JSON.stringify(data));
+            tg.close();
+        });
+    </script>
+</body>
+</html>
