@@ -1,8 +1,9 @@
 const fullnameInput = document.getElementById("fullname")
 const phoneInput = document.getElementById("phone-number")
 const dateInput = document.getElementById("datetime")
+const btn = document.querySelector(".check")
 
-validateForm()
+btn.onclick = validateForm
 
 function validateForm() {
     const name = fullnameInput.value
@@ -29,5 +30,20 @@ function checkPhone(phone) {
 function checkDate(date) {
     if (!date) {
         return "Выберите дату тренировки"
+    }
+}
+
+function showInvalid(validityErrors) {
+    const inputs = [fullnameInput, phoneInput, dateInput]
+
+    for (let i = 0; i < 3; i++) {
+        if (validityErrors[i]) {
+            const hint = document.createElement("p")
+            
+            hint.append(validityErrors[i])
+
+            inputs[i].classList.add("invalid")
+            inputs[i].after(hint)
+        }
     }
 }

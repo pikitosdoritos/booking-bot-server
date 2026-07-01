@@ -158,3 +158,8 @@ textarea {
 
     resize: none;
 }
+
+.invalid {
+    border: 1px solid red;
+    background-color: rgb(from red r g b / 0.03);
+}
