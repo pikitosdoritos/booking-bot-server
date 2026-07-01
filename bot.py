@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, WebAppInfo
 from aiogram.filters import CommandStart
 
-TOKEN = "8810629058:AAE4THdq4wX6-7P7vxDszBpJHipMKelG2MY"
+TOKEN = "**"
 # Посилання на вашу завантажену HTML-сторінку (обов'язково HTTPS)
 WEB_APP_URL = "https://pikitosdoritos.github.io/booking-bot-server/form" 
 
