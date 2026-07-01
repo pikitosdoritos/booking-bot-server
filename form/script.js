@@ -44,6 +44,8 @@ function showInvalid(validityErrors) {
 
             inputs[i].classList.add("invalid")
             inputs[i].after(hint)
+        } else {
+            inputs[i].classList.remove("invalid")
         }
     }
 }
