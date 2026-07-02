@@ -7,10 +7,16 @@ body {
     font-family: "Golos Text", sans-serif;
     background-color: #ffffff;
     color: #16202E;
+    height: 100vh;
 }
 
 .page {
-    min-height: 100vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 768px;
+    height: 100%;
     display: flex;
     justify-content: center;
     padding: 80px 16px 24px;
@@ -164,7 +170,7 @@ textarea {
     background-color: rgb(from red r g b / 0.03);
 }
 
-.invalid + p {
+.invalid+p {
     color: red;
     font-size: small;
     margin: 3px;
