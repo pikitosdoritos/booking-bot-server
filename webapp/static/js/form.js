@@ -12,7 +12,13 @@ function validateForm() {
 
     const validityErrors = [checkName(name), checkPhone(phone), checkDate(date)]
 
+    const hasError = validityErrors.some(error => error)
+
     showInvalid(validityErrors)
+
+    if (!hasError) {
+        window.location.href = "success.html"
+    }
 }
 
 function checkName(name) {
