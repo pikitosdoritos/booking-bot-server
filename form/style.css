@@ -163,3 +163,9 @@ textarea {
     border: 1px solid red;
     background-color: rgb(from red r g b / 0.03);
 }
+
+.invalid + p {
+    color: red;
+    font-size: small;
+    margin: 3px;
+}

@@ -37,6 +37,10 @@ function showInvalid(validityErrors) {
     const inputs = [fullnameInput, phoneInput, dateInput]
 
     for (let i = 0; i < 3; i++) {
+        const p = inputs[i].nextElementSibling?.closest("p")
+
+        if (p) p.remove()
+
         if (validityErrors[i]) {
             const hint = document.createElement("p")
             
