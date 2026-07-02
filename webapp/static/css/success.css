@@ -9,7 +9,7 @@ main {
 }
 
 h1 {
-    margin: 0px 0px 12px;
+    margin: 20px 0px 12px;
     font: 700 24px "Golos Text";
     color: rgb(22, 32, 46);
 }
@@ -22,7 +22,7 @@ h2 {
 
 .card {
     margin-top: 32px;
-    width: 100%;
+    width: 370px;
     background: rgb(246, 247, 249);
     border-radius: 18px;
     padding: 18px 20px;
@@ -30,6 +30,13 @@ h2 {
     flex-direction: column;
     gap: 14px;
     text-align: left;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 span {
@@ -50,6 +57,7 @@ hr {
 }
 
 .check-wrap {
+    margin-top: 200px;
     width: 104px;
     height: 104px;
     border-radius: 50%;
@@ -70,4 +78,22 @@ hr {
     justify-content: center;
     box-shadow: rgba(47, 107, 216, 0.6) 0px 12px 26px -8px;
     background-color: #2f6bd8;
+}
+
+button {
+    margin: 16px;
+    width: 300px;
+    height: 50px;
+    border-radius: calc(22px + 2px);
+    border-width: medium;
+    border-style: none;
+    border-color: currentcolor;
+    border-image: initial;
+    background: rgb(242, 244, 247);
+    color: rgb(58, 68, 82);
+    font: 700 16px "Golos Text";
+    cursor: pointer;
+    position: absolute;
+    /* Отвязываем кнопку от текста */
+    bottom: 0;
 }
