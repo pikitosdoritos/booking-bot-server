@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import asyncio
 from aiogram import Bot, Dispatcher, F
-from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, WebAppInfo, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, WebAppInfo, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from aiogram.filters import CommandStart, Command
 import json
 import os
@@ -57,6 +57,14 @@ async def processing_web_data(message: Message):
                 ]
             ]
         ))
+
+@dp.callback_query(F.data == "confirm")
+async def confirm_request(callback: CallbackQuery):
+    await callback.answer("Заявка подтверждена")
+
+@dp.callback_query(F.data == "decline")
+async def confirm_request(callback: CallbackQuery):
+    await callback.answer("Заявка отклонена")
 
 async def main():
     await dp.start_polling(bot)
